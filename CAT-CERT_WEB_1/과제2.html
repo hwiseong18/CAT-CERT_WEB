@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>과제 2 회원가입 폼 만들기</title>
+</head>
+<body>
+    <center><h1>룰루랄라 회원가입</h1></center>
+    <table border="1" align="center" width="500" height="450">
+        <tr>
+            <td width="25%" align="center">이름</td>
+            <td><input type="text" name="name" required></td>
+        </tr>
+        <tr>
+            <td align="center">아이디</td>
+            <td><input type="text" name="ID" required></td>
+        </tr>
+        <tr>
+            <td align="center">이메일</td>
+            <td>
+                <input type="text" name="Email" style="width: 100px" required> 
+                @ 
+                <select name="Domain">
+                    <option value="naver">naver.com</option>
+                    <option value="naver">gmail.com</option>
+                    <option value="naver">outlook.com</option>
+                    <option value="naver">icloud.com</option>
+                </select>
+            </td>
+        </tr>
+        <tr height="70px">
+            <td align="center">비밀번호</td>
+            <td><input type="password" name="PW" placeholder="최대 20자 입력" required></td>
+        </tr>
+        <tr>
+            <td align="center">비밀번호 확인</td>
+            <td><input type="password" name="PW_Check" required></td>
+        </tr>
+        <tr>
+            <td align="center">생년월일</td>
+            <td><input type="date" name="birth"></td>
+        </tr>
+        <tr>
+            <td align="center">성별</td>
+            <td>
+                <input type="radio" name="gender"> 남
+                <input type="radio" name="gender"> 여
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2"><center><input type="submit" value="회원가입"></center></td>
+        </tr>
+    </table> 
+</body>
+</html>

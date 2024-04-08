@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실습 3</title>
+</head>
+<body>
+    <table border="1" width="500px" height="500px" align="center">
+        <tr height="5%">
+            <td width="20%"><center>이름</center></td>
+            <td><input type="text" name="name"></td>
+        </tr>
+        <tr height="5%">
+            <td width="20%"><center>아이디</center></td>
+            <td><input type="text" name="id"></td>
+        </tr>
+        <tr height="5%">
+            <td width="20%"><center>성별</center></td>
+            <td>
+                <input type="radio" name="iradio" value="radio1"> 남
+                <input type="radio" name="iradio" value="radio2"> 여
+            </td>
+        </tr>
+        <tr height="5%">
+            <td width="20%"><center>나이</center></td>
+            <td>
+                <input type="checkbox" name="icheckbox" value="checkbox1"> 20
+                <input type="checkbox" name="icheckbox" value="checkbox2"> 21
+                <input type="checkbox" name="icheckbox" value="checkbox3"> 22 <br>
+                <input type="checkbox" name="icheckbox" value="checkbox4"> 23
+                <input type="checkbox" name="icheckbox" value="checkbox5"> 24
+            </td>
+        </tr>
+        <tr height="5%">
+            <td width="20%"><center>생일</center></td>
+            <td>
+                <select name="iselect" title="월" selected="월">
+                    <option>월</option>
+                    <option>1월</option>
+                    <option>2월</option>
+                    <option>3월</option>
+                    <option>4월</option>
+                    <option>5월</option>
+                    <option>6월</option>
+                    <option>7월</option>
+                    <option>8월</option>
+                    <option>9월</option>
+                    <option>10월</option>
+                    <option>11월</option>
+                    <option>12월</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" height="5%"><center>자기소개서</center></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <textarea name="content" cols="80" rows="20" placeholder="400자 이상 입력하세요"></textarea>
+            </td>
+        </tr>
+        <tr height="5%">
+            <td width="20%"><center>사진 첨부</center></td>
+            <td><input type="file" name="ifile"></td>
+        </tr>
+        <tr height="5%">
+            <td colspan="2" width="20%"><center><input type="submit" name="submit" value="가입 신청"></center></td>
+        </tr>
+    </table>
+</body>
+</html>
