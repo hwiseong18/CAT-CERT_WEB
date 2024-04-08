@@ -1,0 +1,10 @@
+div {
+    border: 1px dashed rgb(112, 4, 128);
+    color: rgb(246, 255, 0);
+}
+
+#myid {
+    border: 5px solid rgb(242, 0, 0);
+    color: rgb(250, 250, 250);
+    font-size: x-large;
+}
