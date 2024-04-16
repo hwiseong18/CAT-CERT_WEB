@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실습 3</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+        body {
+            background-image: url(./CAT-Banner.png);
+            font-family: 'Montserrat', sans-serif;
+            margin: 0px;
+            padding: 0px;
+        }
+        h1 {
+            text-align: center;
+            color:darkgray;
+        }
+        table {
+            border: 1px solid black;
+            padding-right: 20px;
+            background-color: whitesmoke;
+
+        }
+        td {
+            text-align: center;
+        }
+        .name, .id, .password, .password_check, .file {
+            width: 100%;
+        }
+        input {
+            border: 0;
+            background-color: gainsboro;
+            padding: 10px;
+        }
+        .submit {
+            background-color: rgb(147, 39, 39);
+            color: white;
+            border-radius: 20px;
+        }
+        .submit:hover {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Create Account</h1>
+    <table width="400px" height="400px" align="center">
+        <tr>
+            <td><input type="text" name="name" placeholder="NAME" class="name"></td>
+        </tr>
+        <tr>
+            <td><input type="text" name="id" class="id" placeholder="ID"></td>
+        </tr>
+        <tr>
+            <td><input type="password" name="password" class="password" placeholder="Password"></td>
+        </tr>
+        <tr>
+            <td><input type="password" name="password_check" class="password_check" placeholder="Password_Check"></td>
+        </tr>
+        <tr>
+            <td>
+                <input type="radio" name="iradio" value="radio1"> 남
+                <input type="radio" name="iradio" value="radio2"> 여
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="checkbox" name="icheckbox" value="checkbox1"> 20
+                <input type="checkbox" name="icheckbox" value="checkbox2"> 21
+                <input type="checkbox" name="icheckbox" value="checkbox3"> 22 <br>
+                <input type="checkbox" name="icheckbox" value="checkbox4"> 23
+                <input type="checkbox" name="icheckbox" value="checkbox5"> 24
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <select name="iselect" title="월" selected="월">
+                    <option>월</option>
+                    <option>1월</option>
+                    <option>2월</option>
+                    <option>3월</option>
+                    <option>4월</option>
+                    <option>5월</option>
+                    <option>6월</option>
+                    <option>7월</option>
+                    <option>8월</option>
+                    <option>9월</option>
+                    <option>10월</option>
+                    <option>11월</option>
+                    <option>12월</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td><input type="file" name="ifile" class="file"></td>
+        </tr>
+        <tr>
+            <td><center><input type="submit" name="submit" class="submit" value="Join"></center></td>
+        </tr>
+    </table>
+</body>
+</html>
