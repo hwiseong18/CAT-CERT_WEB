@@ -1,7 +1,7 @@
 <?php
     $int = 12345;
     $char = "A";
-    %string = "Hello PHP";
+    $string = "Hello PHP";
     $float = 12.345;
     $array = array("array1", "array2", "array3");
 
