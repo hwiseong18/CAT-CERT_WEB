@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            display: inline-block;
+        }
+        #red {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+        #blue {
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+        }
+        #green {
+            width: 200px;
+            height: 200px;
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <div id="red" onmouseover="change_color('red')"></div>
+        <div id="blue" onmouseover="change_color('blue')"></div>
+        <div id="green" onmouseover="change_color('green')"></div>
+    </center>
+    <script>
+        function change_color(color) {
+            document.body.style.backgroundColor = color;
+            setTimeout(change_color, 1000);
+        }
+    </script>
+</body>
+</html>

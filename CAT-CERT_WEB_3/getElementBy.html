@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Tag Name</p>
+    <div id="div1" onmouseover="change()">id</div>
+    <span class="span1">class</span>
+    <script>
+        var a = document.getElementsByTagName("p")[0].innerHTML;
+        var b = document.getElementById("div1").innerHTML;
+        var c = document.getElementsByClassName("span1")[0].innerHTML;
+        alert("p = "+a+", div = "+b+", span = "+c);
+        i=0;
+        function change(){
+            i++;
+            document.getElementById("div1").innerHTML = "과제 재밌어요 공감수:"+i;
+            setTimeout(change,1000);
+        }
+    </script>
+</body>
+</html>
