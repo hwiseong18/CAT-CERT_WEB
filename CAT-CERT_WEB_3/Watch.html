@@ -6,22 +6,57 @@
     <title>시계</title>
     <style>
         body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
             margin: 0;
             }
-        #circle {
+        .circle {
+            
             width: 600px;
             height: 600px;
             border-radius: 50%;
             border: 5px solid black;            
         }
+        p {
+            font-size: 500%;
+            margin-top: 220px;
+            text-align: center;
+        }
+        #btn_div {
+            width: 600px;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
     <div class="circle">
-
+        <p id="time">
+            00:00:00
+        </p>
+    </div>
+    <div id="btn_div">
+        <button id="btn" onclick="timer()">시작</button>
     </div>
 </body>
 </html>
+<script>
+    function timer() {
+        $time = document.querySelector("#time");
+        total_time = 0;
+        setInterval(() => {
+            total_time += 1;
+            hour = parseInt(total_time/3600);
+            minute = parseInt(total_time%3600/60);
+            second = parseInt(total_time%3600%60);
+            if(total_time==86400) {
+                total_time = 0;
+            }
+            else
+                $time.innerHTML = `${formatTime(hour)}:${formatTime(minute)}:${formatTime(second)}`;
+        },1000);
+    }
+    function formatTime(i) {
+        if (i < 10) {
+            i = "0" + i;
+        }
+        return i;
+    }
+</script>
