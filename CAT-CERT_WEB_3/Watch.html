@@ -6,57 +6,54 @@
     <title>시계</title>
     <style>
         body {
-            margin: 0;
+            background-image:url('./제목 없음.png');
             }
+        .container {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+        }
         .circle {
-            
             width: 600px;
             height: 600px;
-            border-radius: 50%;
-            border: 5px solid black;            
+            margin-top: 10vh;
         }
         p {
             font-size: 500%;
-            margin-top: 220px;
-            text-align: center;
-        }
-        #btn_div {
-            width: 600px;
+            color: white;
+            font-weight: bold;
+            margin-top: 250px;
             text-align: center;
         }
     </style>
 </head>
-<body>
-    <div class="circle">
-        <p id="time">
-            00:00:00
-        </p>
+<body onload="startTime()">
+    <div class="container">
+        <div class="circle">
+            <p id="time">
+                
+            </p>
+        </div>
     </div>
-    <div id="btn_div">
-        <button id="btn" onclick="timer()">시작</button>
-    </div>
+    <script>
+        function startTime() {
+            var today = new Date();
+            var h = today.getHours();
+            var m = today.getMinutes();
+            var s = today.getSeconds();
+            m = formatTime(m);
+            s = formatTime(s);
+            document.getElementById('time').innerHTML =
+            h + ":" + m + ":" + s;
+            var t = setTimeout(startTime, 500);
+        }
+        function formatTime(i) {
+            if (i < 10) {i = "0" + i};  // 10 미만의 숫자 앞에 0 추가
+            return i;
+        }
+    </script>
 </body>
 </html>
-<script>
-    function timer() {
-        $time = document.querySelector("#time");
-        total_time = 0;
-        setInterval(() => {
-            total_time += 1;
-            hour = parseInt(total_time/3600);
-            minute = parseInt(total_time%3600/60);
-            second = parseInt(total_time%3600%60);
-            if(total_time==86400) {
-                total_time = 0;
-            }
-            else
-                $time.innerHTML = `${formatTime(hour)}:${formatTime(minute)}:${formatTime(second)}`;
-        },1000);
-    }
-    function formatTime(i) {
-        if (i < 10) {
-            i = "0" + i;
-        }
-        return i;
-    }
-</script>
+
+<!-- 현재 시간 구하는 함수 검색 -->
+<!-- 시, 분, 초 나누는 법 -->
